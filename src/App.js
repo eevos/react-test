@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          ddEdit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -17,6 +17,20 @@ function App() {
         >
           Learn React
         </a>
+        <div id="app"></div>
+        <script type="text/javascript">
+        const app = document.getElementById('app');
+        const header = document.createElement('h1');
+        const headerContent = document.createTextNode(
+        'Develop. Preview. Ship. 🚀',
+      );
+
+      // Append the text to the H1 element
+      header.appendChild(headerContent);
+
+      // Place the H1 element inside the div
+      app.appendChild(header);
+        </script>
       </header>
     </div>
   );
