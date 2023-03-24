@@ -7,13 +7,27 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/jsx">
+
         const app = document.getElementById("app")
       
+        function Header() {
+           return (<h1>Develop. Preview. Ship. 🚀</h1>)
+         }
+         function Paragraph(){
+            return (<p>https://nextjs.org/learn/foundations/from-javascript-to-react/displaying-data-with-props</p>)
+         }
       
-        function header() {
-        }
-      
-        ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app)
+         function HomePage() {
+            return (
+              <div id="test">
+                {/* Nesting the Header component */}
+                <Header />
+                <Paragraph />
+
+              </div>
+            );
+          }
+         ReactDOM.render(<HomePage />, app)
       </script>
   </body>
 </html> 
