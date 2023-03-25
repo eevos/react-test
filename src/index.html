@@ -8,26 +8,33 @@
 
     <script type="text/jsx">
 
-        const app = document.getElementById("app")
-      
-        function Header() {
-           return (<h1>Develop. Preview. Ship. 🚀</h1>)
+      const app = document.getElementById("app")
+
+      function Header(props) {
+        return <h1>{createTitle(props.title)}</h1>
          }
-         function Paragraph(){
+      function Paragraph(){
             return (<p>https://nextjs.org/learn/foundations/from-javascript-to-react/displaying-data-with-props</p>)
          }
-      
-         function HomePage() {
-            return (
-              <div id="test">
-                {/* Nesting the Header component */}
-                <Header />
-                <Paragraph />
 
-              </div>
-            );
+      function createTitle(title){
+      if (title){
+            return title;
           }
-         ReactDOM.render(<HomePage />, app)
-      </script>
+      return 'Default title';
+         }
+
+      function HomePage() {
+            return (
+      <div id="test">
+        {/* Nesting the Header component */}
+        <Header title="React title" />
+        <Paragraph />
+
+      </div>
+      );
+          }
+      ReactDOM.render(<HomePage />, app)
+    </script>
   </body>
-</html> 
+</html>
