@@ -4,7 +4,7 @@ function Header(props) {
   return <h1>{createTitle(props.title)}</h1>
 }
 function Paragraph() {
-  return (<p>https://nextjs.org/learn/foundations/from-javascript-to-react/displaying-data-with-props</p>)
+  return (<p>https://nextjs.org/learn/foundations/from-react-to-nextjs/next-steps</p>)
 }
 
 function createTitle(title) {
@@ -20,6 +20,7 @@ export default function HomePage() {
     'Ada Lovelace'
     , 'Grace Hopper'
     , 'Margaret Hamilton'
+    , 'Manjonein'
     , 'Toonypep'];
 
   function handleClick() {
